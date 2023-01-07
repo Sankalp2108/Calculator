@@ -11,22 +11,32 @@
     <div class="Container">
         <div class="grid">
             <input id="display" type="text" placeholder="0"/>
+            <button id="pink" class="btn">CE</button>
+            <button class="btn">x!</button>
             <button class="btn">(</button>
             <button class="btn">)</button>
             <button class="btn">%</button>
             <button id="green" class="btn">AC</button>
+            <button class="btn">sin</button>
+            <button class="btn">pi</button>
             <button class="btn">7</button>
             <button class="btn">8</button>
             <button class="btn">9</button>
             <button class="btn">/</button>
+            <button class="btn">cos</button>
+            <button class="btn">log</button>
             <button class="btn">4</button>
             <button class="btn">5</button>
             <button class="btn">6</button>
             <button class="btn">*</button>
+            <button class="btn">tan</button>
+            <button class="btn">sqrt</button>
             <button class="btn">1</button>
             <button class="btn">2</button>
             <button class="btn">3</button>
             <button class="btn">-</button>
+            <button class="btn">e</button>
+            <button class="btn">pow</button>
             <button class="btn">0</button>
             <button class="btn">.</button>
             <button id="blue" class="btn">=</button>
@@ -49,6 +59,60 @@
                 {
                     string = "";
                     document.querySelector("input").value = string;
+                }
+                else if(e.target.innerHTML=='sin')
+                {
+                    string = Math.sin(string)
+                    document.querySelector('input').value = string;
+                }
+                else if(e.target.innerHTML=='cos')
+                {
+                    string = Math.cos(string)
+                    document.querySelector('input').value = string;
+                }
+                else if(e.target.innerHTML=='tan')
+                {
+                    string = Math.tan(string)
+                    document.querySelector('input').value = string;
+                }
+                else if(e.target.innerHTML=='sqrt')
+                {
+                    string = Math.sqrt(string,2)
+                    document.querySelector('input').value = string;
+                }
+                else if(e.target.innerHTML=='e')
+                {
+                    string = 2.71828182846;
+                    document.querySelector('input').value = string;
+                }
+                else if(e.target.innerHTML=='pi')
+                {
+                    string = 3.14159265359;
+                    document.querySelector('input').value = string;
+                }
+                else if(e.target.innerHTML=='CE')
+                {
+                    string = string.substring(0,string.length-1);
+                    document.querySelector('input').value = string;
+                }
+                else if(e.target.innerHTML=='log')
+                {
+                    string = Math.log(string);
+                    document.querySelector('input').value = string;
+                }
+                else if(e.target.innerHTML=='pow')
+                {
+                    string = Math.pow(string,2);
+                    document.querySelector('input').value = string;
+                }
+                else if(e.target.innerHTML == 'x!')
+                {
+                    let fact = 1;
+                    for(let i=1 ; i <= string ; i++ )
+                    {
+                        fact *= i;
+                    }
+                    document.querySelector('input').value = fact;
                 }
                 else
                 {            
